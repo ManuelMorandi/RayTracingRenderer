@@ -1,0 +1,298 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3081A28F-6416-4FEA-B2B9-A39C45B5BBF1}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>UI</RootNamespace>
+    <AssemblyName>UI</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialSkin, Version=2.3.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialSkin.2.2.3.1\lib\net461\MaterialSkin.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Components\AvailableModelElement.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\AvailableModelElement.Designer.cs">
+      <DependentUpon>AvailableModelElement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\PositionedModelElement.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\PositionedModelElement.Designer.cs">
+      <DependentUpon>PositionedModelElement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\SceneList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\SceneList.Designer.cs">
+      <DependentUpon>SceneList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\IRouter.cs" />
+    <Compile Include="Screens\AddLambertianScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Screens\AddLambertianScreen.Designer.cs">
+      <DependentUpon>AddLambertianScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\AddMetallicScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Screens\AddMetallicScreen.Designer.cs">
+      <DependentUpon>AddMetallicScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\AddModelScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Screens\AddModelScreen.Designer.cs">
+      <DependentUpon>AddModelScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\AddSceneScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Screens\AddSceneScreen.Designer.cs">
+      <DependentUpon>AddSceneScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\EditSceneScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Screens\EditSceneScreen.Designer.cs">
+      <DependentUpon>EditSceneScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\LogInScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Screens\LogInScreen.Designer.cs">
+      <DependentUpon>LogInScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\FigureScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Screens\FigureScreen.Designer.cs">
+      <DependentUpon>FigureScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Screens\MaterialScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Screens\MaterialScreen.Designer.cs">
+      <DependentUpon>MaterialScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\ModelScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Screens\ModelScreen.Designer.cs">
+      <DependentUpon>ModelScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\PositionElementScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Screens\PositionElementScreen.Designer.cs">
+      <DependentUpon>PositionElementScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\SceneScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Screens\SceneScreen.Designer.cs">
+      <DependentUpon>SceneScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\SignUpScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Screens\SignUpScreen.Designer.cs">
+      <DependentUpon>SignUpScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\Menu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\Menu.Designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\AddFigureScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Screens\AddFigureScreen.Designer.cs">
+      <DependentUpon>AddFigureScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\ListElement.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\ListElement.Designer.cs">
+      <DependentUpon>ListElement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserException.cs" />
+    <EmbeddedResource Include="Components\AvailableModelElement.resx">
+      <DependentUpon>AvailableModelElement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\ListElement.resx">
+      <DependentUpon>ListElement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\PositionedModelElement.resx">
+      <DependentUpon>PositionedModelElement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\SceneList.resx">
+      <DependentUpon>SceneList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\AddLambertianScreen.resx">
+      <DependentUpon>AddLambertianScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\AddMetallicScreen.resx">
+      <DependentUpon>AddMetallicScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\AddModelScreen.resx">
+      <DependentUpon>AddModelScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\AddSceneScreen.resx">
+      <DependentUpon>AddSceneScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\EditSceneScreen.resx">
+      <DependentUpon>EditSceneScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\FigureScreen.resx">
+      <DependentUpon>FigureScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\LogInScreen.resx">
+      <DependentUpon>LogInScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Screens\MaterialScreen.resx">
+      <DependentUpon>MaterialScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\ModelScreen.resx">
+      <DependentUpon>ModelScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\PositionElementScreen.resx">
+      <DependentUpon>PositionElementScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\SceneScreen.resx">
+      <DependentUpon>SceneScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\SignUpScreen.resx">
+      <DependentUpon>SignUpScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\AddFigureScreen.resx">
+      <DependentUpon>AddFigureScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DataAccess\DataAccess.csproj">
+      <Project>{ecb266e6-cc2c-40d3-8899-ef83f59f5d95}</Project>
+      <Name>DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ObligatorioFernandezMorandi\Domain.csproj">
+      <Project>{54BD89D7-4464-4351-86C0-6967F6D637A2}</Project>
+      <Name>Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Services\Services.csproj">
+      <Project>{614193d1-6cd9-4979-84ca-ebb7bb163a72}</Project>
+      <Name>Services</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sphere.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NoPreview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+</Project>
